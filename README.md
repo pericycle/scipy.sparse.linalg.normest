@@ -8,4 +8,4 @@ from scipy.sparse import rand
 A = rand(1000,1000, density = 0.01, format = 'csr')
 B = A.T.dot(A)
 tol = 1e-4
-est = normest(A,tol)
+est = normest(B,tol)
