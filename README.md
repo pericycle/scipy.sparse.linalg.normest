@@ -9,3 +9,10 @@ A = rand(1000,1000, density = 0.01, format = 'csr')
 B = A.T.dot(A)
 tol = 1e-4
 est = normest(B,tol)
+
+# compare with output from numpy.linalg.norm
+
+import numpy as np
+C = B.todense()
+est1 = np.linalg.norm(C, ord=2)
+error = np.abs(est-est1)
