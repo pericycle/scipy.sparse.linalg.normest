@@ -1,3 +1,5 @@
+import numpy as np
+
 def normest(M,tol):
     # return an approximation of the 2 norm of a matrix
     # M is a numpy array or a scipy csr_matrix
