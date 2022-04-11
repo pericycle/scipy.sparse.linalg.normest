@@ -2,7 +2,7 @@ import numpy as np
 
 def normest(M,tol):
     # return an approximation of the 2 norm of a matrix
-    # M is a numpy array or a scipy csr_matrix
+    # M is a numpy array or a scipy sparse matrix
     # up to a tolerance of tol using the power method
     max_it = 25
     res = 1
