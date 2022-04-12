@@ -1,10 +1,10 @@
 import numpy as np
 
-def normest(M,tol):
+def normest(M,tol=1e-4):
     # return an approximation of the 2 norm of a matrix
     # M is a symmetric positive semi-definite numpy array or a scipy sparse matrix
     # up to a tolerance of tol using the power method
-    max_it = 25
+    max_it = 10
     res = 1
     it_count = 0
     x = np.random.rand(M.shape[1],1)
@@ -15,6 +15,7 @@ def normest(M,tol):
         y = M.dot(x)
         ynorm = np.sqrt(np.sum(y**2))
         res = abs(pnorm-ynorm)
+        pnorm = np.copy(ynorm)
         x = y/ynorm
         it_count += 1
     v = M.dot(x)
