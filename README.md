@@ -7,8 +7,7 @@ normest uses the power iteration to compute the largest eigenvalue.
 from scipy.sparse import rand
 A = rand(1000,1000, density = 0.01, format = 'csr')
 B = A.T.dot(A)
-tol = 1e-4
-est = normest(B,tol)
+est = normest(B)
 print('normest approximation: ', est)
 
 # compare with output from numpy.linalg.norm
