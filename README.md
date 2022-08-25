@@ -1,6 +1,6 @@
 # scipy.sparse.linalg.normest
 This short code returns an estimate of the spectral norm of a symmetric positive semi-definite scipy sparse matrix.
-The spectral norm of a scipy sparse matrix is not implemented in the current version of scipy.
+The spectral norm of a scipy sparse matrix is not implemented in the current version of scipy. (SciPy v 1.9.0)
 normest uses the power iteration to compute the largest eigenvalue.
 
 # Example:
