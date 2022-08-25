@@ -4,9 +4,9 @@ The spectral norm of a scipy sparse matrix is not implemented in the current ver
 normest uses the power iteration to compute the largest eigenvalue.
 
 # Example:
-from scipy.sparse import rand
-A = rand(1000,1000, density = 0.01, format = 'csr')
-B = A.T.dot(A)
+from scipy.sparse import rand <br/>
+A = rand(1000,1000, density = 0.01, format = 'csr') <br/>
+B = A.T.dot(A) <br/>
 est = normest(B)
 print('normest approximation: ', est)
 
